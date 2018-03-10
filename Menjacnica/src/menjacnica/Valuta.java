@@ -16,12 +16,16 @@ public class Valuta {
 		return naziv;
 	}
 	public void setNaziv(String naziv) {
+		if(naziv==null)
+			throw new RuntimeException("Morate uneti naziv!");
 		this.naziv = naziv;
 	}
 	public String getSkraceniNaziv() {
 		return skraceniNaziv;
 	}
 	public void setSkraceniNaziv(String skraceniNaziv) {
+		if(skraceniNaziv==null || skraceniNaziv.length()!=3)
+			throw new RuntimeException("Morate uneti skraceni naziv duzine 3 karaktera!");		
 		this.skraceniNaziv = skraceniNaziv;
 	}
 	public LinkedList<Kurs> getKursevi() {
