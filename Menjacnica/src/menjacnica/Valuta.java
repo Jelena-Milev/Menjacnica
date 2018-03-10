@@ -31,8 +31,10 @@ public class Valuta {
 	public LinkedList<Kurs> getKursevi() {
 		return kursevi;
 	}
-	public void setKursevi(LinkedList<Kurs> kursevi) {
-		this.kursevi = kursevi;
+	public void setKursevi(Kurs kurs) {
+		if(kurs==null || kursevi.contains(kurs))
+			throw new RuntimeException("Morate uneti kurs ili kurs vec postoji!");
+		this.kursevi.add(kurs);
 	}
 	@Override
 	public int hashCode() {
