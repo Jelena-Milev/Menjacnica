@@ -11,6 +11,7 @@ public class Menjacnica implements MenjacnicaInterfejs{
 
 	@Override
 	public void dodajKurs(String valuta, GregorianCalendar datum, double prodajni, double srednji, double kupovni) {
+		//pomocni komentar 2
 		for (int i = 0; i < valute.size(); i++) {
 			if(valuta!=null && valute.get(i).getNaziv().equals(valuta)) {
 				Kurs k=new Kurs();
